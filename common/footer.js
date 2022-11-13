@@ -1,5 +1,5 @@
 // Load footer
-fetch('./footer.html')
+fetch('common/footer.html')
 .then(res => res.text())
 .then(text => {
     let oldelem = document.querySelector("script#footer");
