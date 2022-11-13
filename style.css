@@ -1,0 +1,57 @@
+:root {
+    --bg: #eeeee4;
+}
+
+body {
+    background-color: var(--bg);
+}
+
+.heading {
+    font-size: 20pt;
+    color: chocolate;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    padding: 20px;
+}
+
+.flex-container img {
+    width: 100%; 
+    max-width: 90vw;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.card {
+    background-color: #f8f8f1;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 7px;
+}
+
+
+.content{
+    max-width: 90vw;
+    margin: 100px 100px 100px 100px;
+}
+
+.section-heading{
+    font-size: 26pt;
+    text-align: center;
+    border-bottom: solid 1px rgba(187, 179, 165, 0.246);
+}
+
+@media screen and (max-width: 900px) {
+    .flex-container {
+      flex-direction: column;
+    }
+
+    .content {
+        margin: 100px 5vw 100px 5vw;
+    }
+}
