@@ -1,5 +1,5 @@
 // Load navbar
-fetch('/common/nav.html')
+fetch('common/nav.html')
 .then(res => res.text())
 .then(text => {
     let oldelem = document.querySelector("script#navbar");
