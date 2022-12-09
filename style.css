@@ -11,8 +11,10 @@ body {
 }
 
 .heading {
-    font-size: 20pt;
-    color: chocolate;
+    /* font-size: 20pt;
+    color: chocolate; */
+    font-size: x-large;
+    font-weight: bold;
 }
 
 .flex-container {
@@ -51,8 +53,6 @@ body {
     margin-bottom: 6px;
 }
 
-
-
 .card {
     background-color: #f8f8f1;
     border-radius: 10px;
@@ -73,7 +73,8 @@ body {
 .section-heading{
     font-size: 26pt;
     text-align: center;
-    border-bottom: solid 1px rgba(187, 179, 165, 0.246);
+    border-bottom: solid 1px rgba(0, 0, 0, 0.468);
+    margin-top: 100px;
 }
 
 .icon-row {
@@ -92,6 +93,38 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    gap: 20px;
+}
+
+.no-sep {
+    border-bottom: none;
+}
+
+.slidesContainer {
+    position: relative;
+}
+
+.slidesButtonLeft {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+}
+
+.slidesButtonRight {
+    position: absolute;
+    top: 50%;
+    right: 0%;
+}
+
+.mySlides {
+    display:none;
+    width: 100%;
+    max-height: 70vh;
+    object-fit: contain;
+}
+
+.mySlides::after{
+    content: test
 }
 
 .künstler-card {
@@ -151,11 +184,18 @@ body {
     }
 
     .künstler-card {
-        width: 100%
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20px;
     }
 
     .künstler-card .button-4 {
         width: 100%
+    }
+
+    .künstler-info > * {
+        text-align: center;
     }
 }
 
