@@ -23,6 +23,7 @@ body {
     margin-bottom: 30px;
     padding: 10px;
     justify-content: space-between;
+    align-items: center;
 }
 
 #hero {
@@ -37,7 +38,7 @@ body {
 }
 
 .thumb-container {
-    width: 300px;
+    width: 100%;
 }
 .thumb-container > img{
     margin-left: 5px;
@@ -64,14 +65,9 @@ body {
     width: 100%;
 }
 
-.content{
-    max-width: 90vw;
-    margin: 0px 100px 100px 100px;
-}
-
-.content-grid {
-    display: grid;
-    grid-template-columns: 50% 50%;
+.content {
+    width: 70vw;
+    margin: auto;
 }
 
 .section-heading{
@@ -91,22 +87,75 @@ body {
 }
 
 
-.indented {
-    padding-left: 10vw !important;
+.künstler-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.künstler-card {
+    width: 500px;
+    /* margin-right: 20px; */
+    margin-top: 30px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
 }
 
 
+.künstler-card > img {
+    width: 200px;
+    margin-right: 10px;
+}
+
+
+.künstler-info {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.künstler-info > * {
+    margin-top: 10px;
+}
+
+.künstler-info > *:first-child{
+    font-size: x-large;
+    font-weight: bold;
+}
+
 @media screen and (max-width: 900px) {
+    
     .flex-container {
       flex-direction: column;
     }
 
     .content {
-        margin: 100px 5vw 100px 5vw;
+        width: 90vw;
+        margin: auto;
     }
 
     .thumb-container {
         width: 70vw
+    }
+
+    .container-item {
+        align-items: center;
+    }
+
+    .button-4 {
+        width: 80%;
+    }
+
+    .künstler-card {
+        width: 100%
+    }
+
+    .künstler-card .button-4 {
+        width: 100%
     }
 }
 
