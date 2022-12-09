@@ -7,8 +7,8 @@
             <a id="mobileToggleButton"
                 class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
                 onclick="toggleMobileNav()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-            <a href="/" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Home</a>
-            <a href="/künstler.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Die Künstler</a>
+            <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Home</a>
+            <a href="künstler.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Die Künstler</a>
             <div class="w3-dropdown-hover w3-hide-small">
                 <button class="w3-padding-large w3-button" title="More">Ausstellungen <i
                         class="fa fa-caret-down"></i></button>
@@ -18,15 +18,20 @@
                     <a href="ausstellung_2017.html" class="w3-bar-item w3-button">KAFF 2017</a>
                 </div>
             </div>
-            <a href="/kontakt.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Kontakt</a>
+            <a href="kontakt.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Kontakt</a>
         </div>
     </div>
 </div>
 
 <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
 <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-    <a href="/index.html" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMobileNav()">Home</a>
-    <a href="/künstler.html" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMobileNav()">Die Künstler</a>
-    <a href="/kontakt.html" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMobileNav()">Ausstellungen</a>
-    <a href="/kontakt.html" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMobileNav()">Kontakt</a>
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMobileNav()">Home</a>
+    <a href="künstler.html" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMobileNav()">Die Künstler</a>
+    <a href="kontakt.html" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMobileNav()">Kontakt</a>
+    <div class="w3-bar-item w3-button w3-padding-large" onclick="toggleMobileSubNav()">Ausstellungen</div>
+    <div id="subNav" class="w3-hide w3-hide-large w3-hide-medium">
+        <a href="ausstellung_2022.html" class="w3-bar-item w3-button w3-padding-large" style="padding-left: 20vw !important;" onclick="toggleMobileNav()">2022</a>
+        <a href="ausstellung_2018.html" class="w3-bar-item w3-button w3-padding-large" style="padding-left: 20vw !important;" onclick="toggleMobileNav()">2018</a>
+        <a href="ausstellung_2017.html" class="w3-bar-item w3-button w3-padding-large" style="padding-left: 20vw !important;" onclick="toggleMobileNav()">2017</a>
+    </div>
 </div>

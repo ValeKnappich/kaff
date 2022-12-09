@@ -1,6 +1,6 @@
 // Used to toggle the menu on small screens when clicking on the menu button
 function toggleMobileNav() {
-    var x = document.getElementById("navDemo");
+    x = document.getElementById("navDemo");
     if (x.className.indexOf("w3-show") == -1) {
         x.className += " w3-show";
     } else { 
@@ -8,3 +8,11 @@ function toggleMobileNav() {
     }
 }
 
+function toggleMobileSubNav() {
+    x = document.getElementById("subNav");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
