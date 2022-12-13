@@ -4,7 +4,7 @@
 
 html {
     scroll-behavior: smooth;
-  }
+}
 
 body {
     background-color: var(--bg);
@@ -34,7 +34,7 @@ body {
 }
 
 .flex-container img {
-    width: 99%; 
+    width: 99%;
     max-height: 200px;
     object-fit: cover;
 }
@@ -42,7 +42,8 @@ body {
 .thumb-container {
     width: 100%;
 }
-.thumb-container > img{
+
+.thumb-container>img {
     margin-left: 5px;
     margin-right: 5px;
 }
@@ -54,15 +55,23 @@ body {
 }
 
 .card {
-    background-color: #f8f8f1;
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 7px;
+    /* border-radius: 10px; */
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 7px; */
+    border-radius: 13px;
+    background: #f8f8f1;
+    box-shadow: 8px 8px 16px #636360,
+        -8px -8px 16px #ffffff;
 }
 
 .container-item {
     display: flex;
     flex-direction: column;
     width: 100%;
+    align-items: center;
+}
+
+.container-item>* {
+    text-align: center;
 }
 
 .content {
@@ -70,7 +79,7 @@ body {
     margin: auto;
 }
 
-.section-heading{
+.section-heading {
     font-size: 26pt;
     text-align: center;
     border-bottom: solid 1px rgba(0, 0, 0, 0.468);
@@ -116,14 +125,17 @@ body {
     right: 0%;
 }
 
-.mySlides {
-    display:none;
+.image {
     width: 100%;
     max-height: 70vh;
     object-fit: contain;
 }
 
-.mySlides::after{
+.mySlides {
+    display: none;
+}
+
+.mySlides::after {
     content: test
 }
 
@@ -138,7 +150,7 @@ body {
 }
 
 
-.künstler-card > img {
+.künstler-card>img {
     width: 200px;
     margin-right: 10px;
 }
@@ -151,19 +163,107 @@ body {
     padding: 20px;
 }
 
-.künstler-info > * {
+.künstler-info>* {
     margin-top: 10px;
 }
 
-.künstler-info > *:first-child{
+.künstler-info>*:first-child {
     font-size: x-large;
     font-weight: bold;
 }
 
+button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+button.learn-more {
+    width: 12rem;
+    height: auto;
+}
+
+button.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 2rem;
+    height: 2rem;
+    background: #282936;
+    border-radius: 1.625rem;
+}
+
+button.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+}
+
+button.learn-more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.3rem;
+    width: 1rem;
+    height: 0.125rem;
+    background: none;
+}
+
+button.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.29rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+}
+
+button.learn-more .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.2rem 0;
+    margin: 0 0 0 1.85rem;
+    color: #282936;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+button:hover .circle {
+    width: 100%;
+}
+
+button:hover .circle .icon.arrow {
+    background: #fff;
+    transform: translate(1rem, 0);
+}
+
+button:hover .button-text {
+    color: #fff;
+}
+
 @media screen and (max-width: 900px) {
-    
+
     .flex-container {
-      flex-direction: column;
+        flex-direction: column;
     }
 
     .content {
@@ -194,70 +294,7 @@ body {
         width: 100%
     }
 
-    .künstler-info > * {
+    .künstler-info>* {
         text-align: center;
     }
-}
-
-
-
-/* Button styles */
-
-.button-4 {
-  appearance: none;
-  background-color: #1e87d25f;
-  border: 1px solid rgba(27, 31, 35, 0.15);
-  border-radius: 6px;
-  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
-  box-sizing: border-box;
-  color: #24292E;
-  cursor: pointer;
-  display: inline-block;
-  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 20px;
-  list-style: none;
-  padding: 6px 16px;
-  position: relative;
-  transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: middle;
-  white-space: nowrap;
-  word-wrap: break-word;
-  max-width: 400px;
-  justify-self: end;
-}
-
-.button-4:hover {
-  background-color: #1e87d2c5;
-  text-decoration: none;
-  transition-duration: 0.1s;
-}
-
-.button-4:disabled {
-  background-color: #FAFBFC;
-  border-color: rgba(27, 31, 35, 0.15);
-  color: #959DA5;
-  cursor: default;
-}
-
-.button-4:active {
-  background-color: #EDEFF2;
-  box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
-  transition: none 0s;
-}
-
-.button-4:focus {
-  outline: 1px transparent;
-}
-
-.button-4:before {
-  display: none;
-}
-
-.button-4:-webkit-details-marker {
-  display: none;
 }
