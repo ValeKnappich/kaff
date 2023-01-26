@@ -3,17 +3,11 @@
     --myorange: rgba(210, 105, 30, 0.702);
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     background-color: var(--bg);
 }
 
 .heading {
-    /* font-size: 20pt;
-    color: chocolate; */
     font-size: x-large;
     font-weight: bold;
 }
@@ -59,7 +53,7 @@ body {
     /* border-radius: 10px; */
     /* box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 7px; */
     border-radius: 13px;
-    background: #f8f8f1;
+    background: white;
     box-shadow: 8px 8px 16px #636360,
         -8px -8px 16px #ffffff;
 }
@@ -78,6 +72,16 @@ body {
 .content {
     width: 70vw;
     margin: auto;
+}
+
+.footer {
+    height: 100px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    margin-top: 50px;
 }
 
 .section-heading {
